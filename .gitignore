@@ -1,0 +1,14 @@
+# Ignore virtual environments
+.venv/
+env/
+venv/
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+
+# Editor settings
+.vscode/
+
+# Ignore Python virtual environment activation scripts
+Pipfile.lock
