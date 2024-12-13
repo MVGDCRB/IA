@@ -74,13 +74,12 @@ def chord(x, law = 0.05):
     if type(x) == np.ndarray:
         c_0 = np.ones_like(x)
     
-      
+     
+   
+    
     if type(law) == float :
         #print('law is float')
         c = c_0 * law
-    elif isinstance(law, (float, np.float64)):
-        #print('law is float')
-        c = c_0 * float(law)
     elif type(law) == list :
         if law[0] == 'l':
             c = law[1] + (law[2] - law[1]) * x
@@ -111,9 +110,6 @@ def torsion(x, law = 'c', p = 10):
     c_0 = np.array([1])
     if type(x) == np.ndarray:
         c_0 = np.ones_like(x)
-
-    if isinstance(p, np.float64):
-        p = float(p)
 
     if law == 'c' :
         t = c_0 * p
@@ -147,7 +143,6 @@ def rotor_adim(omega, vz, R, b,
     dr = dx * R
     vr = omega * r
     c = chord(x, chord_params)
-
     sigma = b * c / (np.pi * R)
     
     
